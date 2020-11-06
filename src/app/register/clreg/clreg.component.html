@@ -1,0 +1,80 @@
+<div class="full-color">
+  <div><br><br> 
+    <h1 style="text-align: center; font-weight: 700; font-family: Poppins; margin-top: 0;">Contingent Leader Registration Form</h1>
+    <p class="para">The contingent leader of a college takes care of the accommodation of all the teams and visitors coming from that particular college. Anyone who wants to avail accommodation must contact their contingent leader. A contingent leader is selected from each and every college and will guide you through the accommodation process during your stay at IIT Bombay. He/she will bridge the gap between you and Mood Indigo. </p>
+    <div class="container">
+      <div class="regform">
+<br>
+        <form name="myForm">
+          <table>
+            <tr>
+              <td class="text"><label for="name">Name:</label></td>
+              <td class="input"><input name="name" [(ngModel)]="name" id="name" placeholder="Your Name"></td>
+            </tr>
+            <tr>
+              <td><label for="email">Email:</label></td>
+              <td><input disabled style="margin-bottom: 0px" name="email" id="email"  placeholder="Your Email" [(ngModel)]="email" autocomplete="none" type="email">
+              <!-- <h1>{{myForm.email.$valid}}</h1> -->
+              </td>
+            </tr>
+            <tr>
+              <td><label for="mobile">Mobile<span class="smallinput">(Preferably WhatsApp)</span>:</label></td>
+              <td><input name="mobile" [(ngModel)]="mobile" id="mobile" placeholder="Your Mobile No."></td>
+            </tr>
+            
+
+              <tr>
+                  <td><label for="fbid">Facebook ID<span class="smallinput">(EG. www.facebook.com/prabhat7758)</span>:</label></td>
+                  <td><input style="margin-bottom: 0px" name="fbid" id="fbid" placeholder="Facebook ID" [(ngModel)]="fbid" autocomplete="none" type="url">
+                  </td>
+                </tr>
+            <tr>
+              <td><label for="currentclg">Current College:</label></td>
+              <td (blur)="showDropDownClg = false"><input style="margin-bottom: 0px" name="people" [(ngModel)]="college" id="currentclg" (click)="toggleDropDownClg()" (clickOutside)="closeDropDownClg()" (focus)="toggleDropDownClg()" placeholder="Select Your College" autocomplete="none">
+                <div class="dropdown" *ngIf="showDropDownClg">
+                  <div (click)="selectValueClg(person)" class="dropdown-option" *ngFor="let person of people | filter:college" (blur)="showDropDownClg = false">
+                    {{person}}
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="currentcity">Current City of Stay:</label></td>
+              <td><input name="city" [(ngModel)]="city" id="currentcity" placeholder="Your City"></td>
+            </tr>
+            
+            <tr>
+              <td><label for="yearofstudy">Current Year of Study:</label></td>
+              <td (blur)="showDropDownCys = false"><input onkeypress="return false;" style="margin-bottom: 0;" name="year" [(ngModel)]="year" id="yearofstudy" placeholder="Select Year of Study" (click)="toggleDropDownCys()" (clickOutside)="closeDropDownCys()" (focus)="toggleDropDownCys()" autocomplete="none">
+                <div class="dropdown" *ngIf="showDropDownCys">
+                  <div (click)="selectValueCys(y)" class="dropdown-option" *ngFor="let y of years" (blur)="showDropDownCys = false">
+                    {{y}}
+                  </div>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td><label for="gender">Gender:</label></td>
+                <td (blur)="showDropDownGen = false"><input onkeypress="return false;" style="margin-bottom: 0px" value={{chosengender}} id="gender" placeholder="Select Your Gender" (click)="toggleDropDownGen()" (clickOutside)="closeDropDownGen()" (focus)="toggleDropDownGen()"  autocomplete="none">
+                  <div class="dropdown" *ngIf="showDropDownGen">
+                    <div (click)="selectValueGen(g)" class="dropdown-option" *ngFor="let g of genders" (blur)="showDropDownGen = false">
+                      {{g}}
+                    </div>
+                  </div>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="rid">Referrral ID:<span class="smallinput">(EG. CC25336)</span></label></td>
+                <td><input name="rid" [(ngModel)]="rid" id="rid" placeholder="If not available, leave blank"></td>
+              </tr>
+          </table>
+          <div style="text-align: center;"><br>
+          <button (click)="createuser()" class="btn"  type="submit" >Next</button>
+        </div>
+        </form>
+        <br><br>
+      </div>
+    </div>
+
+  </div>
+</div>

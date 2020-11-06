@@ -1,0 +1,71 @@
+
+  <div style="background-color: black;">
+    
+    <h1 class="headr">Reg Form</h1>
+  <div class="container">
+    <div class="regform">
+
+
+
+      <form >
+        <table>
+          <tr>
+            <td class="text"><label for="name">NAME:</label></td>
+            <td class="input"><input name="name" [(ngModel)]="name" id="name" placeholder="Your Name"></td>
+          </tr>
+          <tr>
+            <td><label for="mobile">MOBILE:</label></td>
+            <td><input name="mobile" [(ngModel)]="mobile" id="mobile" placeholder="Your Mobile No."></td>
+          </tr>
+
+
+
+          <tr>
+            <td><label for="currentclg">CURRENT COLLEGE:</label></td>
+            <td (blur)="showDropDownClg = false"><input style="margin-bottom: 0px" name="people" [(ngModel)]="college" id="currentclg" (click)="toggleDropDownClg()" (clickOutside)="closeDropDownClg()" (focus)="toggleDropDownClg()" placeholder="Select Your College" autocomplete="none">
+              <div class="dropdown" *ngIf="showDropDownClg">
+                <div (click)="selectValueClg(person)" class="dropdown-option" *ngFor="let person of people | filter:college" (blur)="showDropDownClg = false">
+                  {{person}}
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="currentcity">CURRENT CITY OF STAY:</label></td>
+            <td><input name="city" [(ngModel)]="city" id="currentcity" placeholder="Your City"></td>
+          </tr>
+          <tr>
+            <td><label for="collegepin">PIN CODE OF COLLEGE:</label></td>
+            <td><input name="pin" [(ngModel)]="pin" id="collegepin" placeholder="Pin Code of Your College"></td>
+          </tr>
+          <tr>
+            <td><label for="yearofstudy">CURRENT YEAR OF STUDY:</label></td>
+            <td (blur)="showDropDownCys = false"><input onkeypress="return false;" style="margin-bottom: 0;" name="year" [(ngModel)]="year" id="yearofstudy" placeholder="Select Year of Study" (click)="toggleDropDownCys()" (clickOutside)="closeDropDownCys()" (focus)="toggleDropDownCys()" autocomplete="none">
+              <div class="dropdown" *ngIf="showDropDownCys">
+                <div (click)="selectValueCys(y)" class="dropdown-option" *ngFor="let y of years" (blur)="showDropDownCys = false">
+                  {{y}}
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="gender">GENDER:</label></td>
+            <td (blur)="showDropDownGen = false"><input onkeypress="return false;" style="margin-bottom: 0px" value={{chosengender}} id="gender" placeholder="Select Your Gender" (click)="toggleDropDownGen()" (clickOutside)="closeDropDownGen()" (focus)="toggleDropDownGen()"  autocomplete="none">
+              <div class="dropdown" *ngIf="showDropDownGen">
+                <div (click)="selectValueGen(g)" class="dropdown-option" *ngFor="let g of genders" (blur)="showDropDownGen = false">
+                  {{g}}
+                </div>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td style="text-align: center;">
+              <button (click)="createuser()" class="button" type="submit">SUBMIT</button><br><br>
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </div>
+
+  </div>

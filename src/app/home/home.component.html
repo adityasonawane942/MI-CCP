@@ -1,0 +1,137 @@
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<!-- <div style="font-family: Poppins;" class="container">
+    <h3>New Blog:</h3>
+        <div class="post">
+                <input [(ngModel)]="topic" type="text" placeholder="New Blog Topic"><br>
+                <textarea [(ngModel)]="content" placeholder="Enter Content here..."></textarea>
+            </div> 
+        <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type='file' (change)="onChange($event)" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload"></label>
+            </div>
+            <div class="avatar-preview">
+                <div id="imagePreview" style="background-image: url(../../assets/img/upload1.png);">
+                </div>
+            </div>
+        </div><br>
+        <button (click)="submit()" class="btn">Post</button>
+    </div> -->
+<br />
+<div style="text-align: center;">
+  <!-- Trigger/Open The Modal -->
+  <button style="width: 50%; height: 10%;" class="btn" id="myBtn">
+    POST A NEW BLOG +
+  </button>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal" style="text-align: right;">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div
+        class="modal-header"
+        style="text-align: center; border-radius: 15px 15px 0 0;"
+      >
+        <!-- <span class="close">&times;</span> -->
+        <h2>New Blog</h2>
+      </div>
+      <div class="modal-body">
+        <div class="post">
+          <input
+            class="inp"
+            [(ngModel)]="topic"
+            type="text"
+            placeholder="New Blog Topic"
+          />
+          <textarea
+            class="inp"
+            [(ngModel)]="content"
+            placeholder="Enter Content here..."
+          ></textarea>
+        </div>
+        <!-- <div class="profile">
+                        <img class="proimg" src="{{profiledata.profileurl}}" alt="..."/><br>
+                        <button  type='file' (change)="onChange($event)" id="imageUpload" accept=".png, .jpg, .jpeg"  class="btn" id="imageUpload">Upload Image</button>
+                </div> -->
+
+        <div class="avatar-upload">
+          <div class="avatar-edit" id="edit">
+            <input
+              type="file"
+              (change)="onChange($event)"
+              id="imageUpload"
+              accept=".png, .jpg, .jpeg"
+            />
+            <label for="imageUpload"></label>
+          </div>
+          <div class="avatar-preview">
+            <div>
+              <img
+                id="imagePreview"
+                class="proimg"
+                src="{{ profiledata.profileurl }}"
+                alt="..."
+              />
+            </div>
+          </div>
+        </div>
+        <div class="brk"><br /><br /><br /><br /><br /></div>
+        <br /><br /><br /><br /><br /><br /><br /><br />
+        <div style="text-align: center;">
+          <button
+            [disabled]="!postbutton"
+            style="width: 50%;"
+            (click)="submit()"
+            class="btn"
+          >
+            Post
+          </button>
+        </div>
+      </div>
+      <div class="modal-footer" style="border-radius: 0 0 15px 15px;">
+        <!-- <button class="btn">POST</button> -->
+        <button class="btn" id="close">CLOSE</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="font-family: Poppins;">
+  <div *ngFor="let blogs of blog">
+    <section *ngIf="blogs.bloger_status == 'yes'" class="s1">
+      <div class="img1"><img src="{{ blogs.pic_url }}" class="logo" /></div>
+      <div class="text1">
+        <b>{{ blogs.bloger_name }}</b> <br /><span *ngIf="blogs.types == 'MI'"
+          >College Connect Program</span
+        ><span *ngIf="blogs.types == 'CL'">Contingent Leader</span
+        ><span *ngIf="blogs.types == 'CH'">College Head</span
+        ><span *ngIf="blogs.types == 'CA'">College A ssociate</span> <br />
+        {{ blogs.College }}
+      </div>
+      <div class="text2">{{ blogs.bloger_topic }}</div>
+      <div class="img2">
+        <img
+          src="https://api2.moodi.org/{{ blogs.bloger_pic }}"
+          class="div-img"
+        />
+      </div>
+      <div class="para">
+        <p>{{ blogs.bloger_blog }}</p>
+      </div>
+      <div *ngIf="blogs.types == 'MI'" style="text-align: center;">
+        <a target="_blank" href="{{ blogs.fblink }}"
+          ><button class="btn">
+            <i class="fa fa-facebook-f" style="font-size: 1.5em"></i> SHARE
+          </button></a
+        >
+        <a target="_blank" href="{{ blogs.instalink }}"
+          ><button class="btn">
+            <i class="fa fa-instagram" style="font-size: 1.5em"></i> SHARE
+          </button></a
+        >
+      </div>
+    </section>
+
+    <div [innerHTML]="popup" id="snackbar"></div>
+  </div>
+</div>

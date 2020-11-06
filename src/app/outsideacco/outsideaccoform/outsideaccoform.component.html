@@ -1,0 +1,405 @@
+<br />
+<div style="text-align: center;">
+  <!-- <div class="card" *ngFor="let row of accommodation_data">
+    <h2 class="hotel">{{ row.hotel_name }}</h2>
+    <h4>{{ row.no_of_beds }}-Bed Room(s)</h4>
+    <div *ngFor="let x of arrayOne(row.room_count); let i = index">
+      <div *ngIf="row.no_of_beds == 1">
+        <br />
+        <p>Room Number {{ getIndex(i) }}</p>
+        <div class="inpdiv1">
+          <input
+            pattern="^\S*$"
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a1"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. "
+          />
+        </div>
+      </div>
+
+      <div *ngIf="row.no_of_beds == 2">
+        <br />
+        <p>Room Number {{ getIndex(i) }}</p>
+        <div>
+          <div class="inpdiv2">
+            <input
+              required
+              id="{{ row.room_id }}a{{ getIndex(i) }}a1"
+              class="inp"
+              type="text"
+              placeholder="Enter MI NO. "
+            />
+          </div>
+          <div class="inpdiv2">
+            <input
+              required
+              id="{{ row.room_id }}a{{ getIndex(i) }}a2"
+              class="inp"
+              type="text"
+              placeholder="Enter MI NO. "
+            />
+          </div>
+        </div>
+      </div>
+      <div *ngIf="row.no_of_beds == 3">
+        <br />
+        <p>Room Number {{ getIndex(i) }}</p>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a1"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. "
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a2"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. "
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a3"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. "
+          />
+        </div>
+      </div>
+      <div *ngIf="row.no_of_beds == 4">
+        <br />
+        <p>Room Number {{ getIndex(i) }}</p>
+        <div class="inpdiv4">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a1"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. "
+          />
+        </div>
+        <div class="inpdiv4">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a2"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. "
+          />
+        </div>
+        <div class="inpdiv4">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a3"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. "
+          />
+        </div>
+        <div class="inpdiv4">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a4"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. "
+          />
+        </div>
+      </div>
+      <div *ngIf="row.no_of_beds == 5">
+        <br />
+        <p>Room Number {{ getIndex(i) }}</p>
+        <div class="inpdiv5">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a1"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 1"
+          />
+        </div>
+        <div class="inpdiv5">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a2"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 2"
+          />
+        </div>
+        <div class="inpdiv5">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a3"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 3"
+          />
+        </div>
+        <div class="inpdiv5">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a4"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 4"
+          />
+        </div>
+        <div class="inpdiv5">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a5"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 5"
+          />
+        </div>
+      </div>
+      <div *ngIf="row.no_of_beds == 6">
+        <br />
+        <p>Room Number {{ getIndex(i) }}</p>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a1"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 1"
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a2"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 2"
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a3"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 3"
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a4"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 4"
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a5"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 5"
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a6"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 6"
+          />
+        </div>
+      </div>
+      <div *ngIf="row.no_of_beds == 7">
+        <br />
+        <p>Room Number {{ getIndex(i) }}</p>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a1"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 1"
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a2"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 2"
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a3"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 3"
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a4"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 4"
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a5"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 5"
+          />
+        </div>
+        <div class="inpdiv3">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a6"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 6"
+          />
+        </div>
+        <div class="inpdiv1">
+          <input
+            required
+            id="{{ row.room_id }}a{{ getIndex(i) }}a7"
+            class="inp"
+            type="text"
+            placeholder="Enter MI NO. 7"
+          />
+        </div>
+      </div>
+    </div>
+  </div> -->
+  <div class="card receipt">
+    <ol style="list-style: none;">
+      <li *ngFor="let i of accommodation_data">
+        <p style="display: inline-block; width: 50%;">{{ i.hotel_name }}</p>
+        <p style="display: inline-block; width: 20%;">
+          {{ i.no_of_beds }}-Bed Room
+        </p>
+        <p style="display: inline-block; width: 30%;">
+          {{ i.price }} × {{ i.no_of_beds }} × 5 × {{ i.room_count }} =
+          <b
+            ><span style="font-family: sans-serif; font-weight: 400;"
+              >₹&nbsp;</span
+            >{{ i.price * i.room_count * i.no_of_beds * 5 }}/-</b
+          >
+        </p>
+      </li>
+    </ol>
+    <h1 class="total">
+      Total Amount to be Paid :
+      <span style="font-family: sans-serif; font-weight: 400;">₹&nbsp;</span
+      ><b>{{ grand_value }}/-</b>
+    </h1>
+    <p>
+      Paymet Getway Charge (1.2%) :
+      <span style="font-family: sans-serif; font-weight: 400;">₹&nbsp;</span>
+      {{ (grand_value - 0.012 * grand_value) * 0.012 }}
+    </p>
+  </div>
+  <button
+    class="btn"
+    id="scroller"
+    data-toggle="collapse"
+    data-target="#outerone"
+    (click)="scrollWin()"
+  >
+    Submit
+  </button>
+  <div class="collapse outer" id="outerone">
+    <h1 class="tc">Terms & Conditions</h1>
+    <div style="text-align: left;">
+      <p>
+        <br />● It is mandatory for guests to present valid photo identification
+        at the time of check-in. According to government regulations, a valid
+        Photo ID has to be carried by every person staying at the hotel. The
+        identification proofs accepted are Aadhar Card, Driving License, Voter
+        ID Card, and Passport. Without an Original copy of valid ID, the guest
+        will not be allowed to check-in. <br />● PAN card & college id are not
+        accepted as a valid ID card. <br />● Mood Indigo is not responsible for
+        any mishappenings. It would be the student’s responsibility to keep
+        their belongings safe and secure. <br />● Extra mattress will be
+        provided for triple occupancy bookings. <br />● Pets are not allowed in
+        the hotel premises. <br />● Should any action by a guest be deemed
+        inappropriate by the hotel, or if any inappropriate behavior is brought
+        to the attention of the hotel, the hotel reserves the right, after the
+        allegations have been investigated, to take action against the guest.
+        <br />● Guests shall be liable for any damage, except normal wear and
+        tear to Hotel asset. Guest shall keep the Hotel room in a good condition
+        and maintain hygiene and cleanliness. <br />● No Smoking Policy: We
+        really take pride in keeping all our rooms fresh and clean, and
+        discourage smoking in the rooms. In case guests wish to smoke, the Hotel
+        Reception will be happy to help. <br />● OYO may reach out to guests to
+        get feedback about their experience through calls or messages. <br />●
+        While booking through this portal you hereby consent for maximum
+        adjustment in the hotel rooms <br />● No Refund on Cancellation.
+      </p>
+      <h3>Hotel Specific Policies</h3>
+      <p>
+        <br />● Hotel specific amenities are captured. Guests are advised to
+        refer the same while booking. <br />● Hotels in remote locations may not
+        have Wi-Fi connectivity due to the unavailability of the network in
+        those regions. <br />● Some hotels may deny entry of visitors to rooms.
+        Please confirm with the hotel before inviting visitors to the rooms.
+        <br />● The guests would be accommodated in the following manner:
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;3 individuals on a master bed
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;1 individual on a single extra mattress
+        <br />&nbsp;&nbsp;&nbsp;&nbsp;3 individuals on 2 single mattresses
+      </p>
+      <h3>Mood Indigo Specific Policies</h3>
+      <p>
+        <br />● Mood Indigo is not responsible for any mishappenings in the
+        hotel. It would be the student’s responsibility to keep their belongings
+        safe and secure. <br />● College id is required for entering the IIT
+        Bombay campus. <br />● Guests will not be allowed to enter the campus
+        before 7 am. <br />● Guests will not be allowed to stay in the campus
+        after 10 pm. If violated, strict actions would be taken. <br />● Guests
+        need to collect passes daily from OLD SAC.
+      </p>
+    </div>
+
+    <label class="container">
+      <input
+        class="inpbtn"
+        type="checkbox"
+        data-toggle="collapse"
+        data-target="#one"
+      />
+      <span style="font-size: 110%;">
+        I hereby accept all the Terms & Conditions
+      </span>
+    </label>
+  </div>
+
+  <br /><br /><br />
+  <!-- <button class="btn">Confirm</button> -->
+  <div id="one" class="collapse">
+    <!-- <h3>The button below contains the instructions, guidelines, PDF and presentation that might help you to conduct the orientation and publicize Mood Indigo</h3> -->
+    <br /><button id="rzp-button1" class="btn" (click)="submit()">
+      MAKE PAYMENT
+    </button>
+  </div>
+  <!-- <button id="rzp-button1" class="btn" (click)="submit()">MAKE PAYMENT</button> -->
+  <br /><br />
+</div>

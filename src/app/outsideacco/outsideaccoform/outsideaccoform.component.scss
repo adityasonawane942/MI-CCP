@@ -1,0 +1,117 @@
+.card {
+  width: 80%;
+  padding: 2%;
+  font-family: Poppins;
+  position: relative;
+  left: 10%;
+}
+
+.hotel {
+  font-weight: 900;
+}
+
+.inpdiv1 {
+  display: inline-block;
+  width: 50%;
+}
+
+.inpdiv2 {
+  display: inline-block;
+  width: 40%;
+}
+
+.inpdiv3 {
+  display: inline-block;
+  width: 30%;
+}
+
+.inpdiv4 {
+  display: inline-block;
+  width: 50%;
+}
+
+.inpdiv5 {
+  display: inline-block;
+  width: 30%;
+}
+
+.inp {
+  margin: 1%;
+  border: 2px solid #2f2f31;
+  font-size: 18px;
+  border-radius: 10px;
+  width: 90%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.inpbtn{
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 4px;
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  border-color: black;
+  font-size: 30px;
+  border-radius: 30px;
+  width: 30%;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  text-align: center;
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  text-align: center;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  text-align: center;
+}
+
+.outer{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+ol{
+  padding: 0;
+}
+
+@media screen and (max-width: 650px) {
+  .inp {
+    font-size: 9px;
+    border: 1px solid #2f2f31;
+    border-radius: 5px;
+  }
+  .btn {
+    font-size: 10px;
+    width: 35%;
+  }
+  .receipt{
+    font-size: 70%;
+  }
+  .total,.tc{
+    font-size: 150%;
+  }
+  .outer{
+    padding-left: 6%;
+    padding-right: 3%;
+    font-size: 100%;
+  }
+}

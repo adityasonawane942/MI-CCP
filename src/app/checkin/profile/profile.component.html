@@ -1,0 +1,121 @@
+<br>
+      <div class="col-md-12">
+        <div class="card card-user">
+          <div class="image">
+            <img src="../../assets/img/profileback.jpg" alt="..." />
+          </div>
+          <div class="content" style="margin-top: 20%; min-height: unset;">
+            <div class="author">
+              <a href="#">
+                <!-- <img
+                  class="avatar border-gray"
+                  src="{{ profiledata.profileurl }}"
+                  alt="..."
+                /> -->
+              </a>
+            </div>
+            <!-- <p class="description text-center">Refferal ID: {{profiledata.referral_code}}</p> -->
+            <p class="description text-center">
+              Name : {{ name }} <i *ngIf="check" class="fa fa-check" style="color: green; font-size: 20px;" aria-hidden="true"></i>
+            </p>
+            <p class="description text-center">
+              Email ID: {{ email }}
+            </p>
+            <p class="description text-center">
+              Mobile No : {{ mobileno }}
+            </p>
+            <p class="description text-center">
+              MI No : {{ mi_number }}
+            </p>
+            <p class="description text-center">
+              Present City : {{ present_city }}
+            </p>
+            <p class="description text-center">
+              Present College : {{ present_college }}
+            </p>
+            <p class="description text-center">
+              Pincode : {{ pincode }}
+            </p>
+          </div>
+          <hr />
+          
+      </div>
+    </div>
+      <div class="text-center">
+        <button *ngIf="!check" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Check In</button>
+        <button *ngIf="check" type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalafter">Checked In</button>
+      </div>
+      <div class="modal fade" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Terms & Conditions</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+              <ul>
+             <li> Mood Indigo is a cultural festival. No political activity, rallies, protests will be entertained during your stay in the campus.</li>
+             <li>     Cigarettes, alcohol, marijuana or any other contraband is not allowed in the IIT Bombay campus.</li>
+                 <li> IIT Bombay is not responsible in case of any mishap, accident or any other injury during your stay in the campus.</li>
+               <li>  Gatherings in large groups are not allowed.</li> 
+               <li>  No damage to the institute property will be tolerated. Any damage to the hostel or institute property is the responsibility of the visitor.</li> 
+               <li>   No loud noise is allowed in the campus after 10 PM. Sound to be in the permissible limit before 10PM.</li>
+</ul>
+
+
+<input type="checkbox">I hereby agree to the above mentioned guidelines. Any violation of the same will restrict my stay in the campus and IIT Bombay can take strict disciplinary actions against me.
+
+
+
+
+            </div>
+            
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <div style="display: inline-block;"><button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button></div>
+              <div style="display: inline-block;"><button id="submit" type="button" class="btn btn-danger" data-dismiss="modal" (click)="checkin()">SUBMIT</button></div>
+              
+      <div id="loader"></div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+      <div class="modal fade" id="myModalafter">
+        <div class="modal-dialog">
+          <div class="modal-content">
+          
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title">Terms & Conditions</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            
+            <!-- Modal body -->
+            <div class="modal-body">
+              <ul>
+                <li> Mood Indigo is a cultural festival. No political activity, rallies, protests will be entertained during your stay in the campus.</li>
+                <li>     Cigarettes, alcohol, marijuana or any other contraband is not allowed in the IIT Bombay campus.</li>
+                    <li> IIT Bombay is not responsible in case of any mishap, accident or any other injury during your stay in the campus.</li>
+                  <li>  Gatherings in large groups are not allowed.</li> 
+                  <li>  No damage to the institute property will be tolerated. Any damage to the hostel or institute property is the responsibility of the visitor.</li> 
+                  <li>   No loud noise is allowed in the campus after 10 PM. Sound to be in the permissible limit before 10PM.</li>
+   </ul>
+
+<h4>I have agreed to the mentioned Terms & Conditions.</h4>
+
+            </div>
+             <!-- Modal footer -->
+             <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">CLOSE</button>
+            </div>
+        
+            
+          </div>
+        </div>
+      </div>

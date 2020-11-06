@@ -1,0 +1,224 @@
+
+.bg1 {
+    z-index: -3;
+    width:100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  
+  .bg2 {
+  
+    z-index: -1;
+    width:100%;
+    /* position: absolute; */
+    /* bottom: 0px; */
+    left: 0px;
+    /* clip: rect(0,0, 100,0); */
+    /* overflow: hidden;    */
+    /* max-height: 120px; */
+  
+  }
+  
+  .full-color{
+  background-color:  	#AF32FF;
+  position: absolute;
+  /* height:100vh; */
+  top:0;
+  
+   right:0;
+   left:0;
+  
+  
+   z-index: -150;
+  }
+  
+  
+  .container{
+    /* margin-left: 180px; */
+    position: relative;
+    text-align: center;
+  }
+  
+  .headr{
+    /*font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;*/
+    font-family: Welcome;
+    font-size: 180px;
+    margin-top: 0;
+    color: white;
+    text-align: center;
+    margin-bottom: 0;
+  }
+  
+  div.gallery img {
+    width: 80%;
+    height: auto;
+  }
+  
+  div.desc {
+    text-align: center;
+    font-size: 25px;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 30px 30px;
+    float: left;
+    width: 25%;
+    /* margin-left: 40px; */
+  }
+  
+  .regform{
+    width: 100%;
+    align-self: center;
+    top: 0;
+    color: white;
+  }
+  
+  label {
+    margin-left: 0px;
+    font-size: 18px;
+    font-family: Verdana, cursive;
+    margin-top: 0px;
+    color: white;
+    width: 100%;
+    text-align: right;
+  }
+  
+  input {
+    width: 70%;
+    max-width: 100%;
+    display: table-cell;
+    position: relative;
+    /*left: 40px !important;*/
+    border: groove white!important;
+    border-width: 15000px;
+    border-radius: 4em;
+    padding: 0.6em 1.4em;
+    font-size: 15px;
+    background-color: transparent;
+    margin: 10px 10%;
+    outline: none;
+    color:white;
+  }
+  ::placeholder
+  {
+    color:white;
+  }
+  table {
+    width: 100%;
+  }
+  td.text {
+    width: available;
+  }
+  td.input {
+    width: 70%;
+  }
+  .dropdown{
+    position: absolute;
+    width: 75%;
+    padding-left: 10%;
+    padding-right: 5%;
+    align-content: center;
+    child-align: middle;
+    max-height: 217px;
+    z-index: 1;
+    overflow-y: auto;
+    border-radius: 2em;
+    color: black;
+  }
+  
+  .dropdown::-webkit-scrollbar { width: 0 !important }
+  
+  .dropdown-option{
+    font-size: large;
+    background-color: white;
+    border-radius: 2em;
+    height: 10%;
+    padding: 1.5%;
+  }
+  .dropdown-option:hover{
+    background-color: cadetblue;
+  }
+  .dropdown div{
+    width: 80%;
+  }
+  
+  @media only screen and (max-width: 1000px) {
+    .responsive {
+      width: 100%;
+    }
+    label {
+      font-size: 14px;
+    }
+  }
+  
+  @media only screen and (max-width: 750px) {
+    .responsive {
+      width: 100%;
+    }
+    label {
+      font-size: 10px;
+    }
+  
+    .headr {
+      font-size: 120px;
+    }
+  }
+  .logo{
+    width: 13%;
+    height: auto;
+    position: relative;
+    margin-top: 3%;
+    margin-left: 4%;
+  }
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+    label {
+      font-size: 10px;
+    }
+    .dropdown {
+      padding-right: 8%;
+    }
+  
+    .headr {
+      font-size: 80px;
+    }
+    .logo{
+      display: none
+    }
+  }
+  
+  .button{
+    background-color: transparent;
+    color:white;
+    cursor: pointer;
+    width:auto;
+    font-weight: bold;
+    margin-left: 75%;
+    text-align: center;
+    font-size: 15px;
+    font-family: Verdana;
+    border: groove white !important;
+    border-width: 0 1px;
+    background-color: transparent;
+    cursor: pointer;
+    width:120px;
+    padding: 0.4em 1.5em;
+    border-radius: 2em;
+    outline: none !important;
+    margin-top: 20px;
+  }
+  
+  .button:hover{
+    width:130px;
+    padding: 0.45em 1.6em;
+    font-size: 16px;
+    margin-top: 18px;
+  }
+  

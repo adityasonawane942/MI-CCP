@@ -1,0 +1,41 @@
+.btn {
+        background-color: black;
+        color: white;
+        border-color: black;
+        font-size: 30px;
+        padding: 8px 30px;
+        border-radius: 30px;
+        width: 50%;
+        font-family: Poppins;
+      }
+      
+      .btn:hover{
+        background-color: antiquewhite;
+        color: black;
+      }
+
+      @media screen and (max-width:700px){
+        .btn{
+            font-size: 15px;
+        }
+      }
+      @media screen and (max-width:400px){
+        .btn{
+            font-size: 10px;
+        }
+      }
+.s1
+{
+  margin-top: 3%;
+}
+.division
+{
+  text-align: center;
+  float: left;
+} 
+.image
+{
+  width:50%;
+  height:auto;
+  border-radius: 100%;
+}

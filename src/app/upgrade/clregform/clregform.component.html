@@ -1,0 +1,47 @@
+<div style="font-family: Poppins; text-align: center;">
+  <br>
+  <h3 style="padding-left: 10%; padding-right: 10%;">Submit the signed letter from the dean/principal of your college to complete your registration as CL</h3>
+  <br>
+  <div style="text-align: justify; margin: 50px">
+  <p>Do the following for the completion of the registration process. We will walk you through all the requirements for the application.
+    
+  </p>
+  <ul>
+    <li>In order to be nominated as the Contingent Leader of your college, you need an Official Letter on the letterhead of your college signed by the Director/Principal saying that you have been nominated as the Contingent Leader for Mood Indigo 2019. The format for the letter is as specified on the next page under the download button</li>
+    <li>In addition to this, three other people are to be appointed as the Assistant CL. All four of you must mention your MI number along with your name on this letter</li>
+    <li>All the three must be registered as College Head/Associate on  ccp.moodi.org using your referral ID( “{{data.referral_code}}” ) then only you will be able to submit the application form</li>
+    <li>Upload a clear picture of the Non-Objection Letter(NOL) under the upload section</li>
+  </ul>
+</div>
+  <div style="display: inline-block; width: 100%;">
+    <div style="width: 50%; display: inline-block;">
+      <h2 style="font-weight: 700;">Application Letter</h2><br>
+      <button class="btn" (click)="exportPdf()"><a style="color: inherit;">Download</a></button>
+    </div><br><br><br>
+    <div style="width: 50%; display: inline-block;">
+      <h2 style="font-weight: 700;">Upload the signed letter</h2><br>
+      <!-- <button class="btn">Upload</button> -->
+      <div>
+        <div class="avatar-upload">
+            <div class="avatar-edit">
+                <input type='file' (change)="onChange($event)" id="imageUpload" accept=".png, .jpg, .jpeg" />
+                <label for="imageUpload"></label>
+            </div>
+            <div class="avatar-preview">
+                <div id="imagePreview" style="background-image: url(../../assets/img/upload1.png);">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+  </div>
+  <br>
+  <br>
+  <button class="btn" (click)="submit()"><a style="color: inherit;">Submit</a></button>
+    <br><br><br>
+</div>
+
+<div [innerHTML]="popup" id="snackbar"></div>
+
+<div [innerHTML]="popup" id="snackbar1"></div>

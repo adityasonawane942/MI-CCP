@@ -1,0 +1,27 @@
+<div style="text-align: center; font-family: Poppins; color: rgb(75, 211, 58);">
+    <h1><b>Payment Successful !</b></h1>
+</div>
+<br>
+<div class="card">
+  <div *ngFor="let i of accommodation_data; let lastitem = last;">
+    <div *ngIf="!lastitem">
+    <div class="left">
+      <h2>{{i.hotel_name}}</h2>
+      <h4>{{i.no_of_beds}}-Bed Room</h4>
+    </div>
+    <div class="right">
+      <h2><span style="font-family: sans-serif; font-weight: 400;">₹&nbsp;</span>{{i.price*i.room_count}}/-</h2>
+      <h4>{{i.room_count}} Room(s)</h4>
+    </div>
+    <hr>
+    </div>
+  </div>
+  <div>
+    <div class="left">
+      <h1>Total Amount</h1>
+    </div>
+    <div class="right">
+      <h1><b><span style="font-family: sans-serif; font-weight: 400;">₹&nbsp;</span>{{accommodation_data[0].grand_value}}/-</b></h1>
+    </div>
+  </div>
+</div>

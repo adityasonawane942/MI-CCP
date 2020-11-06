@@ -1,0 +1,24 @@
+.btn {
+    background-color: black;
+    color: white;
+    border-color: black;
+    font-size: 30px;
+    border-radius: 30px;
+    width: 30%;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+
+@media screen and (max-width:700px){
+    .btn{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width:400px){
+    .btn{
+        font-size: 10px;
+    }
+}

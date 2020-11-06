@@ -1,0 +1,34 @@
+.card {
+    width: 80%;
+    padding: 2%;
+    font-family: Poppins;
+    position: relative;
+    left: 10%;
+  }
+
+hr {
+    margin: 20px 0 20px 0;
+    border-top: 1px solid red;
+}
+
+.left{
+    display: inline-block; width: 70%; text-align: center;
+}
+
+.right{
+    display: inline-block; width: 30%; text-align: center;
+}
+
+@media screen and (max-width:650px){
+    .left{
+    display: block;
+    width: 100%;
+    }
+    .right{
+        display: block;
+    width: 100%;
+    }
+    h1,h2{
+        font-size: 110%;
+    }
+}

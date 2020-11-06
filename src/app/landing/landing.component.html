@@ -1,0 +1,803 @@
+
+<div style="font-family: Poppins;">
+  <div class="site-wrap">
+ 
+     <div class="site-mobile-menu site-navbar-target">
+       <div class="site-mobile-menu-header">
+         <div class="site-mobile-menu-close mt-3">
+           <span class="icon-close2 js-menu-toggle"></span>
+         </div>
+       </div>
+       <div class="site-mobile-menu-body"></div>
+     </div>
+    
+     
+     <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+ 
+       <div class="container">
+         <div class="row align-items-center">
+           
+           <div class="col-6 col-xl-2" style="margin-left: 0">
+             <div id="logo" class="pull-left">
+               <a href="#hero"><img src="../../assets/landing/images/logo.png" alt="logo" title="MI" style="max-height: 40px"></a>
+               <!-- Uncomment below if you prefer to use a text image -->
+               <!--<h1><a href="#hero">Header 1</a></h1>-->
+             </div>
+             <!-- <h1 class="mb-0 site-logo"><a href="index.html" class="h2 mb-0">Finances<span class="text-primary">.</span> </a></h1> -->
+           </div>
+ 
+           <div class="col-12 col-md-10 d-none d-xl-block">
+             <nav class="site-navigation position-relative text-right" role="navigation">
+ 
+               <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
+                 <li><a href="#home-section" class="nav-link">Home</a></li>
+                 <li><a href="#aboutus-section" class="nav-link">About Us</a></li>
+                 <li><a href="#whyccp-section" class="nav-link">Why CCP</a></li>
+                 <li><a href="#incentives-section" class="nav-link">Incentives</a></li>
+                 <li><a href="#Internships-section" class="nav-link">Internships</a></li>
+                 <li><a href="#testimonials-section" class="nav-link">Testimonials</a></li>
+                 <li><a href="#faq-section" class="nav-link">FAQ</a></li>
+                 <li><a href="#team-section" class="nav-link">Team</a></li>
+               </ul>
+             </nav>
+           </div>
+ 
+ 
+           <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle float-right"><span class="icon-menu h3"></span></a></div>
+ 
+         </div>
+       </div>
+       
+     </header>
+ 
+   
+      
+     <div class="site-blocks-cover overlay" style="background-image: url(../../assets/landing/images/ccphome.jpeg);" data-aos="fade" id="home-section">
+ 
+       <div class="container">
+         <div class="row align-items-center justify-content-center">
+ 
+           
+           <div class="col-md-10 mt-lg-5 text-center">
+               <div class="hero-logo">
+                   <img class="" src="../../assets/MoodI_logo.png" alt="Imperial">
+                 </div>
+               <h1 style="font-size: 30px;color: #007bff; font-weight: 900; ">College Connect Program</h1>
+             <div class="single-text owl-carousel">
+               <div class="slide">
+                 <h1 class="text-uppercase" data-aos="fade-up">Build Connections</h1>
+                 <p class="mb-5 desc"  data-aos="fade-up" data-aos-delay="100" style="font-size: 18px;">Those who speak up, those who use their connections, are more likely to succeed than those who sit and wait.<br>-Madeleine M. Kunin</p>
+                 <div data-aos="fade-up" data-aos-delay="100">
+                     <a *ngIf="!status" (click)="login()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                     <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>
+ 
+                   </div>
+                   <button style="display: none" id="button"></button>
+ 
+                   <button style="display: none" id="buttonCA"></button>
+               </div>
+ 
+               <div class="slide">
+                 <h1 class="text-uppercase" data-aos="fade-up">Explore Opportunities</h1>
+                 <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100" style="font-size: 18px;">The limit of your present understanding is not the limit of your possibilities<br>-Guy Finley</p>
+                 <div data-aos="fade-up" data-aos-delay="100">
+       
+                         <a *ngIf="!status" (click)="login()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                         <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>                      
+                                       </div>
+               </div>
+ 
+               <div class="slide">
+                 <h1 class="text-uppercase" data-aos="fade-up">Stand out from the crowd</h1>
+                 <p class="mb-5 desc" data-aos="fade-up" data-aos-delay="100" style="font-size: 18px;">In a world full of game players, the only way to set yourself apart is to be a game changer<br>-Matshona Dhliwayo</p>
+                 <div data-aos="fade-up" data-aos-delay="100">
+                     <a *ngIf="!status" (click)="login()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                     <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>
+ 
+                   </div>
+               </div>
+ 
+             </div>
+           </div>
+             
+         </div>
+       </div>
+     </div>  
+ 
+ 
+     <div class="site-section cta-big-image" id="aboutus-section">
+       <div class="container">
+         <div class="row mb-5 justify-content-center">
+           <div class="col-md-8 text-center">
+             <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">About Us</h2>
+             <p class="lead" data-aos="fade-up" data-aos-delay="100">IIT Bombay’s Mood Indigo is Asia’s Largest College Cultural  Festival</p>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+             <figure class="circle-bg">
+             <img src="../../assets/landing/images/img_2.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+             </figure>
+           </div>
+           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+             
+             <h3 class="text-black mb-4">Best Four Days Of Your Life!</h3>
+ 
+             <p>It annually entertains a footfall of more than 1,43,000 students from over 1700 colleges spanning across India. Over the years, Mood Indigo has played host to lots of artists, celebrities and events spanning 20+ genres.</p>
+ 
+             <p>It's a melting pot of Indian and  Global culture and a showcase of spectacular talent - where streets come alive and every step you take is a step towards new experience, where you can never see it all, but what you do see last lifetime. It’s a little bubble in space and time of infinite possibilities, the place to be in December; and in short: the best four days of your life.</p>
+             
+           </div>
+         </div>    
+         
+       </div>  
+     </div>
+ 
+     <div class="site-section cta-big-image" id="aboutccp-section">
+       <div class="container">
+         <div class="row mb-5 justify-content-center">
+           <div class="col-md-8 text-center">
+             <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">About CCP</h2>
+             <p class="lead" data-aos="fade-up" data-aos-delay="100">Mood Indigo’s College Connect Program plays an integral part in its growth, serving as a major platform for connecting Mood Indigo with college students.</p>
+           </div>
+         </div>
+         <div class="row">
+           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+             <figure class="circle-bg">
+             <img src="../../assets/landing/images/AboutCCP.jpg" alt="Free Website Template by Free-Template.co" class="img-fluid">
+             </figure>
+           </div>
+           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+             
+             <h3 class="text-black mb-4">If opportunity doesn’t knock, create one!</h3>
+ 
+             <p>This is your chance to stand out from the crowd by building strong professional connections and learning valuable skills!</p>
+ 
+             <p>CCP will involve you in the ideation and conduction of amazing events, you'll get to interact with the biggest artists and stalwarts from the industry. Stand out from the throngs of people in your college by associating with us as our College Head and College Associate.</p>
+             
+           </div>
+         </div>    
+         
+       </div>  
+     </div>
+ 
+     <section class="site-section border-bottom bg-light" id="whyccp-section">
+       <div class="container">
+         <div class="row mb-5">
+           <div class="col-12 text-center" data-aos="fade">
+             <h2 class="section-title mb-3">Why CCP</h2>
+           </div>
+         </div>
+         <div class="row align-items-stretch">
+           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up">
+             <div class="unit-4">
+               <div class="unit-4-icon">
+                 <img src="../../assets/landing/images/flaticon-svg/svg/certi.png" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+               </div>
+               <div>
+                 <h3>Get Certified</h3>
+                 <p>Get an organizational certificate from Mood Indigo, IIT Bombay after completition of successfull tenure</p>
+                 <!-- <p><a href="#">Learn More</a></p> -->
+               </div>
+             </div>
+           </div>
+           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+             <div class="unit-4">
+               <div class="unit-4-icon">
+                 <img src="../../assets/landing/images/flaticon-svg/svg/star.png" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+               </div>
+               <div>
+                 <h3>Organize Events</h3>
+                 <p>Get hands-on experience by managing professional events</p>
+                 <!-- <p><a href="#">Learn More</a></p> -->
+               </div>
+             </div>
+           </div>
+           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+             <div class="unit-4">
+               <div class="unit-4-icon">
+                 <img src="../../assets/landing/images/flaticon-svg/svg/idea.png" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+               </div>
+               <div>
+                 <h3>Ideate on building of MI</h3>
+                 <p>Be an integral part of Mood Indigo by contributing in ideation of events and artist lineup.</p>
+                 <!-- <p><a href="#">Learn More</a></p> -->
+               </div>
+             </div>
+           </div>
+ 
+ 
+           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+             <div class="unit-4">
+               <div class="unit-4-icon">
+                 <img src="../../assets/landing/images/flaticon-svg/svg/skill.png" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+               </div>
+               <div>
+                 <h3>Leadership and Managerial skills</h3>
+                 <p>Get a chance to lead a team of Mood Indigo in your college and improve your professional skills</p>
+                 <!-- <p><a href="#">Learn More</a></p> -->
+               </div>
+             </div>
+           </div>
+           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="100">
+             <div class="unit-4">
+               <div class="unit-4-icon">
+                 <img src="../../assets/landing/images/flaticon-svg/svg/updated.png" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+               </div>
+               <div>
+                 <h3>Get updated</h3>
+                 <p>Get latest updates of Mood Indigo</p>
+                 <!-- <p><a href="#">Learn More</a></p> -->
+               </div>
+             </div>
+           </div>
+           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="200">
+             <div class="unit-4">
+               <div class="unit-4-icon">
+                 <img src="../../assets/landing/images/flaticon-svg/svg/video.png" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+               </div>
+               <div>
+                 <h3>Exclusive Content</h3>
+                 <p>Mood Indigo IIT Bombay is offering exclusive video lectures from renowned Academies and Guests</p>
+                 <!-- <p><a href="#">Learn More</a></p> -->
+               </div>
+             </div>
+           </div>
+ 
+         </div>
+       </div>
+     </section>
+ 
+     <section class="site-section" id="incentives-section">
+       <div class="container">
+         <div class="row mb-5">
+           <div class="col-12 text-center" data-aos="fade">
+             <h2 class="section-title mb-3">Incentives</h2>
+           </div>
+         </div>
+ 
+         <div class="row">
+           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+             <div class="h-entry">
+               <a>
+                 <img src="../../assets/landing/images/merch.jpg" alt="Image" class="img-fluid">
+               </a>
+               <h2 class="font-size-regular"><a>Mood Indigo Branded Merchandise</a></h2>
+             </div> 
+           </div>
+           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+             <div class="h-entry">
+               <a>
+                 <img src="../../assets/landing/images/intern.jpg" alt="Image" class="img-fluid">
+               </a>
+               <h2 class="font-size-regular"><a>Internship Opportunity</a></h2>
+             </div> 
+           </div>
+           <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+             <div class="h-entry">
+               <a>
+                 <img src="../../assets/landing/images/acco.jpg" alt="Image" class="img-fluid">
+               </a>
+               <h2 class="font-size-regular"><a>Free Accommodation</a></h2>
+             </div> 
+           </div>
+           </div>
+           <div class="row">
+             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+               <div class="h-entry">
+                 <a>
+                   <img src="../../assets/landing/images/PASSES.jpg" alt="Image" class="img-fluid">
+                 </a>
+                 <h2 class="font-size-regular"><a>VIP Passes</a></h2>
+               </div> 
+             </div>
+             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+               <div class="h-entry">
+                 <a>
+                   <img src="../../assets/landing/images/onliine ccourse.jpg" alt="Image" class="img-fluid">
+                 </a>
+                 <h2 class="font-size-regular"><a>Certified Online Courses</a></h2>
+               </div> 
+             </div>
+             <div class="col-md-6 col-lg-4 mb-4 mb-lg-4" data-aos="fade-up" data-aos-delay="">
+               <div class="h-entry">
+                 <a>
+                   <img src="../../assets/landing/images/vr.jpg" alt="Image" class="img-fluid">
+                 </a>
+                 <h2 class="font-size-regular"><a>Exciting Prizes</a></h2>
+               </div> 
+             </div>
+             </div>
+           
+         </div>
+     </section>
+ 
+     <section class="site-section" id="college-head">
+       <div class="container">
+ 
+         <div class="row mb-5 justify-content-center">
+           <div class="col-md-7 text-center">
+             <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">How does a College Head Work?</h2>
+             <p class="lead" data-aos="fade-up" data-aos-delay="100">College Head leads the team of Mood Indigo in their college</p>
+           </div>
+         </div>
+         
+         <div class="row align-items-lg-center" >
+           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+ 
+             <div class="owl-carousel slide-one-item-alt">
+               <img src="../../assets/landing/images/whych/face.jpg" alt="Image" class="img-fluid">
+               <img src="../../assets/landing/images/whych/manageteam.jpg" alt="Image" class="img-fluid">
+               <img src="../../assets/landing/images/whych/event.jpg" alt="Image" class="img-fluid">
+               <img src="../../assets/landing/images/whych/publicity.jpg" alt="Image" class="img-fluid">
+             </div>
+             <div class="custom-direction">
+               <a href="#" class="custom-prev"><span><i class="material-icons">arrow_back</i></span></a><a href="#" class="custom-next"><span><i class="material-icons">arrow_forward</i></span></a>
+             </div>
+ 
+           </div>
+           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+             
+             <div class="owl-carousel slide-one-item-alt-text">
+               <div>
+                 <h2 class="section-title mb-3">01. Face of  Mood Indigo</h2>
+                 <p>Head the cultural team of Mood Indigo of your college</p>
+                 <a *ngIf="!status" (click)="login()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                 <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>
+               </div>
+               <div>
+                 <h2 class="section-title mb-3">02. Manage and Lead</h2>
+                 <p>Recruit and lead a team of college associates in your college</p>
+                 <a *ngIf="!status" (click)="login()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                 <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>
+ 
+               </div>
+               <div>
+                 <h2 class="section-title mb-3">03. Manage and Organize Events</h2>
+                 <p>Manage the execution of event with the help  of college associates</p>
+                 <a *ngIf="!status" (click)="login()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                 <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>
+ 
+               </div>
+               <div>
+                 <h2 class="section-title mb-3">04. Publicize</h2>
+                 <p>Ideate and execute on publicity plan</p>
+                 <a *ngIf="!status" (click)="login()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                 <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>
+ 
+               </div>
+               
+             </div>
+             
+           </div>
+         </div>
+       </div>
+     </section>
+ 
+     <section class="site-section">
+       <div class="container">
+ 
+         <div class="row mb-5 justify-content-center">
+           <div class="col-md-7 text-center">
+             <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">How does a College Associate Work?</h2>
+             <p class="lead" data-aos="fade-up" data-aos-delay="100">College Associates are the building blocks of Mood Indigo and an essential part of the Mood Indigo team</p>
+           </div>
+         </div>
+         
+         <div class="row align-items-lg-center" >
+           <div class="col-lg-6 mb-5" data-aos="fade-up" data-aos-delay="">
+ 
+             <div class="owl-carousel slide-one-item-alt">
+               <!-- <img src="" alt="Image" class="img-fluid">  -->
+               <img src="../../assets/landing/images/whyca/face.png" alt="Image" class="img-fluid">
+               <img src="../../assets/landing/images/whyca/event.jpg" alt="Image" class="img-fluid">
+               <img src="../../assets/landing/images/whyca/publi.JPG" alt="Image" class="img-fluid">
+               <img src="../../assets/landing/images/whyca/ideate.jpg" alt="Image" class="img-fluid">
+             </div>
+             <div class="custom-direction">
+                 <a href="#" class="custom-prev"><span><i class="material-icons">arrow_back</i></span></a><a href="#" class="custom-next"><span><i class="material-icons">arrow_forward</i></span></a>
+               </div>
+ 
+           </div>
+           <div class="col-lg-5 ml-auto" data-aos="fade-up" data-aos-delay="100">
+             
+             <div class="owl-carousel slide-one-item-alt-text">
+               <div>
+                 <h2 class="section-title mb-3">01. Represent Mood Indigo</h2>
+                 <p>Become an integral part of building of Mood Indigo</p>
+                 <a *ngIf="!status" (click)="loginCA()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                 <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>
+ 
+               </div>
+               <div>
+                 <h2 class="section-title mb-3">02. Organize and Execute Events</h2>
+                 <p>Proper planning and execute professional level events in your college</p>
+                 <a *ngIf="!status" (click)="loginCA()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                 <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>
+               </div>
+               <div>
+                 <h2 class="section-title mb-3">03. Publicize and Induce Participation</h2>
+                 <p>Spread word of mouth publicity and ideate on ways to engage audience</p>
+ 
+                 <a *ngIf="!status" (click)="loginCA()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                 <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>
+               </div>
+               <div>
+                 <h2 class="section-title mb-3">04. Ideate</h2>
+                 <p>Brainstorm on new events and artist ideas for the festival</p>
+ 
+                 <a *ngIf="!status" (click)="loginCA()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">REGISTER / LOGIN</a>
+                 <a *ngIf="status" (click)="profile()" class="btn  btn-primary mr-2 mb-2" style="font-size: 15px; color: white; padding: 10px 10px; border-radius: 5%;">Profile</a>
+               </div>
+               
+             </div>
+             
+           </div>
+         </div>
+       </div>
+     </section>
+ 
+     <section class="site-section" id="gallery-section" data-aos="fade">
+       
+ 
+       <div class="container">
+ 
+         <div class="row mb-3">
+           <div class="col-12 text-center">
+             <h2 class="section-title mb-3">Grand Prizes</h2>
+           </div>
+         </div>
+         <div class="row mb-5">
+             <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="">
+               <img src="../../assets/landing/images/awards/ch.png" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+               <h3 class="card-title">Overall College Head</h3>
+               <p>Award for Mood Indigo’s best-performing college head</p>
+             </div>
+             <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
+                 <img src="../../assets/landing/images/awards/overall.png" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+                 <h3 class="card-title">Overall Contingent</h3>
+                 <p>Award for Mood Indigo’s best-performing contingent</p>
+               </div>
+             <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
+               <img src="../../assets/landing/images/awards/ca.png" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+               <h3 class="card-title">Overall College Associate</h3>
+               <p>Award for Mood Indigo’s best-performing college associate</p>
+             </div>
+            
+   
+           </div>
+       </div>
+            
+   </section>
+   <section class="site-section" id="Internships-section" data-aos="fade">
+   <div class="container">
+ 
+    <div class="row mb-3">
+      <div class="col-12 text-center">
+        <h2 class="section-title mb-3">Internships</h2>
+      </div>
+    </div>
+    <div class="row mb-5">
+        <div class="col-md-12 text-center" data-aos="fade-up" data-aos-delay="">
+          <a target="_blank" href="http://moodi.verzeo.in"><img src="../../assets/landing/SAVE_20190608_122625.png" alt="Free Website Template by Free-Template.co" class="img-fluid w-25 mb-4">
+          </a>
+          <h3 class="card-title">VERZEO</h3>
+          <a style="font-size: 14px;">Looking for Technical Internships in  ML, Data Science, Data Analytics, Full Stack Web Development, Cloud Computing, Cyber Security, etc: To know more Sign up with Verzeo, India's largest guaranteed Internship provider at <a style="font-size: 14px;" href="http://moodi.verzeo.in">http://moodi.verzeo.in</a></a>
+        </div>
+      </div>
+  </div>
+       
+</section>
+ 
+   <section class="site-section testimonial-wrap" id="testimonials-section" data-aos="fade" style="background-color: #007bff; color: white">
+     <div class="container">
+       <div class="row mb-5">
+         <div class="col-12 text-center">
+           <h2 class="section-title mb-3" style="color: white" >Testimonials</h2>
+         </div> 
+       </div>
+     </div>
+     <div class="slide-one-item home-slider owl-carousel">
+         <div>
+           <div class="testimonial" style="font-family: 'Poppins';font-size: 15px">
+             
+               <a>&ldquo;As a part of the College Connect Program, I had the opportunity to be the mediator between the organizing team and my college mates. From providing the accommodation outside the campus to managing the needs of the people inside the campus with the help of the hospitality team of Mood Indigo to interacting with more people and exploring the campus, it was quite a delightful and satisfying experience for me!&rdquo;</a>
+             
+ 
+             <figure class="mb-4 d-flex align-items-center justify-content-center" style="margin-top: 25px">
+               <div><img src="../../assets/landing/images/testimonial/Suhani.png" alt="Image" class="w-50 mb-3"></div>
+               <p>Suhani Garg</p>
+             </figure>
+           </div>
+         </div>
+        
+         <div>
+             <div class="testimonial" style="font-family: 'Poppins';font-size: 15px">
+                 <p>&ldquo;As a part of the CCP team, I got to learn many event management skills which gave a professional touch to my life, as I was involved in the planning and ideation of multiple events. Even during the fest, I had a great time as I was given more value than the other college students present! All in all, it was an amazing learning experience for me!&rdquo;</p>
+                 <figure class="mb-4 d-flex align-items-center justify-content-center" style="margin-top: 25px">
+ 
+                   <div><img src="../../assets/landing/images/testimonial/Prathmay.png" alt="Image" class="w-50 mb-3"></div>
+                 <p>Prathmay Bhawsar</p>
+               </figure>
+               
+             </div>
+           </div>
+ 
+         <div>
+ 
+               <div class="testimonial" style="font-family: 'Poppins';font-size: 15px">
+                   <p>&ldquo;It was an amazing experience working with the Mood Indigo Team in Bangalore, as a member of the College Connect Program. The best part was the organization of such a massive event by just a handful of people. Working alongside the organizing team in making the multicity a huge success, was indeed an excellent experience for me! Certainly looking forward to associating with Mood Indigo once again!.&rdquo;</p>
+               <figure class="mb-4 d-flex align-items-center justify-content-center" style="margin-top: 25px">
+                   <div><img src="../../assets/landing/images/testimonial/Aman.png" alt="Image" class="w-50 mb-3"></div>
+               <p>Aman Mittal</p>
+             </figure>
+ 
+             
+           </div>
+         </div>
+         <div>
+             <div class="testimonial" style="font-family: 'Poppins';font-size: 15px">
+                 <p>&ldquo;I had heard a lot about Mood Indigo before and always wanted to be a part of it. It has provided me with lots of opportunities and an amazing learning experience. Being a fashion designing student I was able to showcase my creativity and designs through various platforms throughout the fest. I would like to congratulate Mood Indigo 2018 for organizing such a great fest and giving so many wonderful memories to cherish!&rdquo;</p>
+                 <figure class="mb-4 d-flex align-items-center justify-content-center" style="margin-top: 25px">
+                     <div><img src="../../assets/landing/images/testimonial/Kanchi.png" alt="Image" class="w-50 mb-3"></div>
+                 <p>Kanchi Jain</p>
+               </figure>
+               
+             </div>
+           </div>
+ 
+         <div>
+             <div class="testimonial" style="font-family: 'Poppins';font-size: 15px">
+                 <p>&ldquo;I had the honor of being a part of the College Connect Program on behalf of my college and it was indeed a wonderful journey. Working together with the Mood Indigo team in the execution of Pune’s Multi-city event was an enriching experience for me. It really helped me expand my professional network in many ways! The competitions, workshops, concerts, bonfires and numerous other amazing events were really astounding. I couldn’t have asked for more!&rdquo;</p>
+               <figure class="mb-4 d-flex align-items-center justify-content-center" style="margin-top: 25px">
+                   <div><img src="../../assets/landing/images/testimonial/Ankur.png" alt="Image" class="w-50 mb-3"></div>
+               <p>Ankur Kumar</p>
+             </figure>
+ 
+           </div>
+         </div>
+ 
+       </div>
+   </section>
+ 
+    
+   
+   <section class="site-section bg-light" id="pricing-section">
+     <div class="container">
+       <div class="row mb-5">
+         <div class="col-12 text-center" data-aos="fade-up">
+           <h2 class="section-title mb-3">Statistics</h2>
+         </div>
+       </div>
+       <div class="row mb-5">
+         <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="">
+           <div class="pricing">
+             <h3 class="text-center text-black">Cities</h3>
+             <div class="price text-center mb-4 ">
+               <span><span>500+</span></span>
+             </div>
+           </div>
+         </div>
+ 
+         <div class="col-md-6 mb-4 mb-lg-0 col-lg-4 pricing-popular" data-aos="fade-up" data-aos-delay="100">
+           <div class="pricing">
+             <h3 class="text-center text-black">Colleges</h3>
+             <div class="price text-center mb-4 ">
+               <span><span>1700+</span></span>
+             </div>
+           <!-- </div> -->
+         </div></div>
+ 
+         <div class="col-md-6 mb-4 mb-lg-0 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+           <div class="pricing">
+             <h3 class="text-center text-black">Students</h3>
+             <div class="price text-center mb-4 ">
+               <span><span>2100+</span></span>
+             </div>
+           </div>
+         </div>
+       
+     </div>
+       <div class="row site-section" id="faq-section">
+         <div class="col-12 text-center" data-aos="fade">
+           <h2 class="section-title">Frequently Asked Questions</h2>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-lg-6">
+           
+           <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+           <h3 class="text-black h4 mb-4">What is Mood Indigo College Connect Program about?</h3>
+           <p>Mood Indigo College Connect Program is a student connect program that aims to build a strong network of culturally enthusiastic and active students across India.</p>
+           </div>
+           
+           <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+             <h3 class="text-black h4 mb-4">How do I apply? What happens after I apply?</h3>
+             <p>You can apply directly through our website. Once the selection process is completed, you will get notified if you are selected.</p>
+           </div>
+ 
+           <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+           <h3 class="text-black h4 mb-4">What is my responsibility being a part of the program?</h3>
+           <p>As a Part of Mood Indigo team, you are required to do the following
+               Ideate on and execute innovative events plan
+               Work actively for social media publicity
+               Strategize and drive Word of Mouth publicity campaigns in campus events and activities
+               </p> 
+         </div>
+   
+         </div>
+         <div class="col-lg-6">
+ 
+           <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+             <h3 class="text-black h4 mb-4">Who can apply?</h3>
+             <p>Students from all colleges across the Globe are welcome to apply.</p>
+           </div>
+           
+           <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+               <h3 class="text-black h4 mb-4">What are the incentives for being a part of the College Connect Program?</h3>
+               <p>This is your opportunity to develop strategic, communication and leadership skills and get rewarded for your work. Apart from the learning experience involved that will benefit your career, you will also get incentives like Mood Indigo exclusive merchandise & accessories, VR Headsets, Speakers & Headphones, Nivea Goodies, and many more prizes. Top students also stand a chance to intern at best companies in India.</p>    
+           </div>
+ 
+           <div class="mb-5" data-aos="fade-up" data-aos-delay="100">
+           <h3 class="text-black h4 mb-4">Who can I contact if I have any questions regarding the college connect program?</h3>
+           <p>You can contact us at publicrelations@moodi.org.</p>
+           </div>
+           
+         </div>
+       </div>
+     </div>
+   </section>
+ 
+ 
+ 
+   <section class="site-section border-bottom" id="team-section" >
+     <div class="container">
+       <div class="row mb-5 justify-content-center">
+         <div class="col-md-8 text-center">
+           <h2 class="section-title mb-3" data-aos="fade-up" data-aos-delay="">Our Team</h2>
+           <p class="lead" data-aos="fade-up" data-aos-delay="100">Coming together is a beginning, staying together is progress, and working together is a success</p>
+         </div>
+       </div>
+       <div class="row">
+         
+ 
+         
+         <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="">
+           <div class="team-member">
+             <figure>
+               <ul class="social">
+                 <li><a href="https://www.facebook.com/prateek5698" target="_blank"><img src="https://img.icons8.com/material/24/000000/facebook-f.png"></a></li>
+                 <li><a href="https://twitter.com/prateek5698" target="_blank"><img src="https://img.icons8.com/material/24/000000/twitter-squared.png"></a></li>
+                 <li><a href="https://www.linkedin.com/in/prateekydv5698/" target="_blank"><img src="https://img.icons8.com/material/24/000000/linkedin.png"></a></li>
+                 <li><a href="https://www.instagram.com/yadavji__p05/" target="_blank"><img src="https://img.icons8.com/material/24/000000/instagram-new.png"></a></li>
+               </ul>
+               <img src="../../assets/landing/images/prateek.jpg" alt="Image" class="img-fluid">
+             </figure>
+             <div class="p-3">
+               <h3 style="font-size: 18px;">Prateek Yadav</h3>
+               <span class="position" style="font-size: 12px;">Hospitality & PR Head</span>
+             </div>
+           </div>
+         </div>
+ 
+         <!-- <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+           <div class="team-member">
+             <figure>
+               <ul class="social">
+                 <li><a href="#"><span class="icon-facebook"></span></a></li>
+                 <li><a href="#"><span class="icon-twitter"></span></a></li>
+                 <li><a href="#"><span class="icon-linkedin"></span></a></li>
+                 <li><a href="#"><span class="icon-instagram"></span></a></li>
+               </ul>
+               <img src="images/person_2.jpg" alt="Image" class="img-fluid">
+             </figure>
+             <div class="p-3">
+               <h3>Dave Simpson</h3>
+               <span class="position">Bank Teller</span>
+             </div>
+           </div>
+         </div> -->
+ 
+         <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+           <div class="team-member">
+             <figure>
+               <ul class="social">
+                 <li><a href="https://www.facebook.com/suchit.sharma.5099" target="_blank"><img src="https://img.icons8.com/material/24/000000/facebook-f.png"></a></li>
+                 <li><a href="https://twitter.com/SuchitS99064025" target="_blank"><img src="https://img.icons8.com/material/24/000000/twitter-squared.png"></a></li>
+                 <li><a href="https://www.linkedin.com/in/suchit-sharma-27718316b/" target="_blank"><img src="https://img.icons8.com/material/24/000000/linkedin.png"></a></li>
+                 <li><a href="https://www.instagram.com/suchiiee__2110/?hl=en " target="_blank"><img src="https://img.icons8.com/material/24/000000/instagram-new.png"></a></li>
+               </ul>
+               
+               <img src="../../assets/landing/images/Suchit.png" alt="Image" class="img-fluid">
+             </figure>
+             <div class="p-3">
+               <h3 style="font-size: 18px;">Suchit Sharma</h3>
+               <span class="position" style="font-size: 12px;">Hospitality & PR Head</span>
+             </div>
+           </div>
+         </div>
+ 
+         
+         
+       </div>
+     </div>
+   </section>
+ 
+     
+   <section class="site-section bg-light" id="contact-section" data-aos="fade">
+     <div class="container">
+       <div class="row mb-5">
+         <div class="col-12 text-center">
+           <h2 class="section-title mb-3">Contact Us</h2>
+         </div>
+       </div>
+       <div class="row mb-5">
+         
+ 
+ 
+         <div class="col-md-4 text-center">
+           <p class="mb-4">
+               <img src="https://img.icons8.com/material/24/000000/worldwide-location.png"><br>
+             <a href="#">Mood Indigo Office, SAC IIT Bombay <br> Powai, Mumbai </a>
+           </p>
+         </div>
+         <div class="col-md-4 text-center">
+           <p class="mb-4">
+               <img src="https://img.icons8.com/material/24/000000/ringer-volume.png"><br>
+             <a href="#">+91 86576-14310</a>
+           </p>
+         </div>
+         <div class="col-md-4 text-center">
+           <p class="mb-0">
+               <img src="https://img.icons8.com/material/24/000000/email.png"><br>
+             <a href="#">publicrelations@moodi.org</a>
+           </p>
+         </div>
+       </div>
+       <div class="row">
+         <div class="col-md-12 mb-5">
+ 
+           
+ 
+           <!-- <form action="#" class="p-5 bg-white">
+             
+             <h2 class="h4 text-black mb-5">Contact Form</h2> 
+             <div class="row form-group">
+               <div class="col-md-6 mb-3 mb-md-0">
+                 <label class="text-black" for="fname">Name</label>
+                 <input type="text" id="fname" class="form-control">
+               </div>
+             </div>
+             <div class="row form-group">
+               
+               <div class="col-md-12">
+                 <label class="text-black" for="email">Email</label> 
+                 <input type="email" id="email" class="form-control">
+               </div>
+             </div>
+             <div class="row form-group">
+               
+               <div class="col-md-12">
+                 <label class="text-black" for="subject">Subject</label> 
+                 <input type="subject" id="subject" class="form-control">
+               </div>
+             </div>
+             <div class="row form-group">
+               <div class="col-md-12">
+                 <label class="text-black" for="message">Message</label> 
+                 <textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Write your notes or questions here..."></textarea>
+               </div>
+             </div>
+             <div class="row form-group">
+               <div class="col-md-12">
+                 <input type="submit" value="Send Message" class="btn btn-primary btn-md text-white">
+               </div>
+             </div>
+ 
+           </form> -->
+         </div>
+         
+       </div>
+     </div>
+   </section>
+   </div>

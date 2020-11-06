@@ -1,0 +1,183 @@
+<div style="font-family: Poppins;" *ngIf="uid2" class="div1">
+  <p>
+    <b>MI No.:</b> {{ uid2.leader.mi_number }}<br />
+    <b>Name:</b> {{ uid2.leader.name }}<br />
+    <b>Mobile:</b> {{ uid2.leader.mobile_number }}<br />
+    <b>No. of Contingent Members Allotted (Male):</b> {{ uid2.male_cap }}<br />
+    <b>No. of Contingent Members Allotted (Female):</b> {{ uid2.female_cap }}
+    <!-- Contingent strength: 3<br>
+  Male Contingent strength: 3<br>
+  Female Contingent strength: 0<br> -->
+  </p>
+
+  <h2>
+    Freezed/Paid (M:{{ uid2.approved_male_cap }} | F:{{
+      uid2.approved_female_cap
+    }})
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <td style="font-size:120%; font-weight:bold;">Name</td>
+        <td style="font-size:120%; font-weight:bold;">Phone Number</td>
+        <td style="font-size:120%; font-weight:bold;">MI Number</td>
+        <td style="font-size:120%; font-weight:bold;">Gender</td>
+        <td></td>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let us of members_added">
+      <!-- <div > -->
+      <tr
+        *ngIf="
+          (us.removed == false && us.approved == true) ||
+          us.approvedbymi == true
+        "
+      >
+        <td>{{ us.user.name }}</td>
+        <td>{{ us.user.mobile_number }}</td>
+        <td>{{ us.user.mi_number }}</td>
+
+        <td>{{ us.user.gender }}</td>
+        <td>
+          <span class="input-group-btn">
+            <button
+              class="btn2"
+              (click)="unfreeze(us.user.mi_number)"
+              type="button"
+              [disabled]="us.approvedbymi"
+            >
+              <span *ngIf="!us.has_paid">Unfreeze</span
+              ><span *ngIf="us.has_paid">Paid</span></button
+            ><br />
+          </span>
+        </td>
+      </tr>
+      <!-- <hr style="width:100%"/> -->
+      <!-- <hr> -->
+    </tbody>
+  </table>
+
+  <!-- </p> -->
+  <h2>
+    Verified (M:{{ uid2.demand_male_cap }} | F:{{ uid2.demand_female_cap }})
+  </h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <td style="font-size:120%; font-weight:bold;">Name</td>
+        <td style="font-size:120%; font-weight:bold;">Phone Number</td>
+        <td style="font-size:120%; font-weight:bold;">MI Number</td>
+        <td style="font-size:120%; font-weight:bold;">Gender</td>
+        <td></td>
+      </tr>
+    </thead>
+    <tbody *ngFor="let us of members_added">
+      <!-- <div > -->
+      <tr
+        *ngIf="
+          us.removed == false &&
+          us.addedbycl == true &&
+          us.approved == false &&
+          us.approvedbymi == false
+        "
+      >
+        <td>{{ us.user.name }}</td>
+        <td>{{ us.user.mobile_number }}</td>
+        <td>{{ us.user.mi_number }}</td>
+
+        <td>{{ us.user.gender }}</td>
+        <td>
+          <span class="input-group-btn">
+            <!-- <button class=btn2 (click)="freeze(us.user.mi_number)" type="button">Freeze</button> -->
+
+            <button
+              class="btn2"
+              (click)="freeze(us.user.mi_number)"
+              type="button"
+            >
+              Freeze</button
+            ><br />
+
+            <!-- <button class=btn2 (click)="freeze(us.user.mi_number)" type="button">Freeze</button> -->
+
+            <button
+              class="btn2"
+              style="margin-top: 1em;"
+              (click)="remove(us.user.mi_number)"
+              type="button"
+            >
+              Remove
+            </button>
+          </span>
+        </td>
+      </tr>
+      <!-- <hr style="width:100%"/> -->
+      <!-- <hr> -->
+    </tbody>
+  </table>
+  <h2>
+    Verification requests (M:{{ uid2.male_cap_notadded }} | F:{{
+      uid2.female_cap_notadded
+    }})
+  </h2>
+  The CL needs to approve the requests pending (below), if the person has
+  contacted the CL regarding the same and the CL is sure that the person is from
+  their college.
+  <table class="table">
+    <thead>
+      <tr>
+        <td style="font-size:120%; font-weight:bold;">Name</td>
+        <td style="font-size:120%; font-weight:bold;">Phone Number</td>
+        <td style="font-size:120%; font-weight:bold;">MI Number</td>
+        <td style="font-size:120%; font-weight:bold;">Gender</td>
+        <td></td>
+      </tr>
+    </thead>
+
+    <tbody *ngFor="let us of members_added">
+      <tr
+        *ngIf="
+          us.removed == false &&
+          us.addedbycl == false &&
+          us.approved == false &&
+          us.approvedbymi == false
+        "
+      >
+        <td>{{ us.user.name }}</td>
+        <td>{{ us.user.mobile_number }}</td>
+        <td>{{ us.user.mi_number }}</td>
+
+        <td>{{ us.user.gender }}</td>
+        <td>
+          <span class="input-group-btn">
+            <button
+              class="btn2"
+              (click)="update(us.user.mi_number)"
+              type="button"
+            >
+              Verify
+            </button>
+          </span>
+        </td>
+      </tr>
+      <!-- </div> -->
+    </tbody>
+  </table>
+  <h3>Enter MI Numbers of Contingent Members</h3>
+  <input
+    #myInput
+    placeholder="Team Member's MI No.(MI-ABC-123)"
+    type="text"
+    class="form-control"
+    style="width:60%; display: inline-block; text-transform:uppercase;"
+  />
+  <button
+    class="btn3"
+    (click)="add_member(myInput.value)"
+    type="button"
+    style="display:inline;"
+  >
+    Add Member
+  </button>
+</div>

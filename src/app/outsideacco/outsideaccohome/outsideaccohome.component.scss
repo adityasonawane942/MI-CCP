@@ -1,0 +1,310 @@
+.main {
+  text-align: center;
+  font-family: Poppins;
+}
+
+
+
+.plus {
+  display: none;
+  padding: 0px 8px 0px 10px;
+  border-radius: 50% 0% 0% 50%;
+  background-color: #2f2f31;
+  color: white;
+  transition: ease 0.5s;
+  border: 2px solid #2f2f31;
+}
+
+.plus:hover {
+  background-color: white;
+  color: #2f2f31;
+}
+
+.plus:focus {
+  outline: 0;
+}
+
+#plusbtn {
+  display: inline-block;
+}
+.minus {
+  display: none;
+  // border: 0;
+  padding: 0px 10px 0px 10px;
+  border-radius: 0% 50% 50% 0%;
+  background-color: #2f2f31;
+  color: white;
+  transition: ease 0.5s;
+  border: 2px solid #2f2f31;
+}
+
+.minus:hover {
+  background-color: white;
+  color: #2f2f31;
+}
+.minus:focus {
+  outline: 0;
+}
+
+#minusbtn {
+  display: inline-block;
+}
+
+#move {
+  display: none;
+  position: fixed;
+  top: 65%;
+  left: 25%;
+  bottom: 2%;
+  width: 70%;
+  margin: 0%;
+  // height: 20%;
+  border-radius: 15px;
+  border: 2px solid red;
+  text-align: center;
+  padding: 1%;
+  vertical-align: middle;
+  overflow-y: auto;
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 1s;
+  animation-name: animatetop;
+  animation-duration: 1s;
+}
+
+.counter {
+  display: none;
+  width: 9.33333333333%;
+  padding: 0px 0px 0px 3%;
+  border-top: 2px solid #2f2f31;
+  border-bottom: 2px solid #2f2f31;
+  border-left: 0;
+  border-right: 0;
+  color: #2f2f31;
+}
+
+@-webkit-keyframes animatetop {
+  from {
+    top: 100%;
+    opacity: 0;
+  }
+  to {
+    top: 65%;
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    top: 100%;
+    opacity: 0;
+  }
+  to {
+    top: 65%;
+    opacity: 1;
+  }
+}
+
+.btn {
+  background-color: black;
+  color: white;
+  border-color: black;
+  font-size: 16px;
+  padding: 8px 30px;
+  width: 14%;
+  border-radius: 30px;
+  font-family: Poppins;
+  margin-top: 10px;
+}
+
+.avail{
+  margin: 0; color: gray;
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+}
+.btngrp {
+  display: none;
+  font-size: 190%;
+  padding: 0;
+  width: 50%;
+  margin-top: 10px;
+}
+
+.type {
+  display: inline-block;
+  width: 50%;
+  float: left;
+  margin: 0;
+  font-size: 15px;
+}
+
+.info {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  float: left;
+  font-size: 18px;
+}
+
+.checkout {
+  display: inline-block;
+  width: 50%;
+  vertical-align: middle;
+  float: right;
+}
+
+.type p {
+  margin: 0;
+}
+
+.modal p {
+  margin: 0;
+}
+
+hr {
+  margin: 20px 0 20px 0;
+  border-top: 1px solid red;
+}
+
+.card {
+  padding: 2%;
+}
+
+.head {
+  display: inline-block;
+  width: 50%;
+}
+.waste2 {
+  display: none;
+}
+.total {
+  font-size: 30px;
+  font-weight: 900;
+  position: fixed;
+  z-index: 999;
+  bottom: 22%;
+  right: 11%;
+}
+.fixed {
+  position: fixed;
+  z-index: 999;
+  box-shadow: 0px 0px 10px 3px #2f2f31;
+  bottom: 12%;
+  right: 15%;
+}
+
+.guide{
+  font-family: Poppins; padding-left: 8%; padding-right: 8%;
+}
+
+.contact{
+  font-family: Poppins; padding-left: 8%; padding-right: 8%;
+}
+
+@media screen and (max-width: 700px) {
+  .btn {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 650px) {
+  .btn {
+    font-size: 10px;
+    width: 36%;
+  }
+
+  .avail{
+    width: 100%;
+    text-align: center;
+  }
+
+  .btngrp {
+    width: 100%;
+    font-size: 150%;
+  }
+
+  .guide{
+    font-family: Poppins; padding-left: 3%; padding-right: 3%;
+  }
+  
+.title{
+  font-size: 150%;
+}
+  .card {
+    position: fixed;
+    bottom: 0;
+    // left: 15%;
+  }
+  #move {
+    // left: 15%;
+    width: 95%;
+    left: 2%;
+  }
+
+  .type {
+    font-size: 20px;
+    width: 100%;
+  }
+  .head {
+    width: 100%;
+  }
+  .waste1 {
+    display: none;
+  }
+  .waste2 {
+    display: block;
+  }
+  .total {
+    font-size: 15px;
+    width: 34%;
+    right: 10%;
+    bottom: 20%;
+  }
+  .fixed {
+    width: 33%;
+    right: 11%;
+    padding: 0;
+    font-size: 15px;
+  }
+  .info {
+    padding-top: 10%;
+    padding-bottom: 10%;
+    font-size: 12px;
+  }
+  .counter {
+    width: 12.3333333%;
+  }
+}
+
+#loader {
+  display: none;
+  left: 50%;
+  z-index: 2000;
+  margin: -75px 0 0 -75px;
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

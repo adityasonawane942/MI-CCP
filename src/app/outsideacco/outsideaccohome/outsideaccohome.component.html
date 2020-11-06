@@ -1,0 +1,195 @@
+<div style="text-align: center; font-family: Poppins;">
+  <h1 class="title">
+    <b
+      >EXTERNAL ACCOMMODATION<br /><span style="font-size: 50%;">
+        in association with</span
+      >
+      OYO Rooms</b
+    >
+  </h1>
+</div>
+<hr style="width: 80%; position: relative; left: 10%;" />
+<div class="guide">
+  <h2 style="text-align: center;"><b>Guidelines for Booking</b></h2>
+  <ul style=" font-size: 17px;">
+    <li>
+      For check-in the identification proofs accepted are Aadhar Card, Driving
+      License, Voter ID Card, and Passport. The college ID won’t be accepted.
+    </li>
+    <li>
+      The MI-numbers of all the students staying would be required while
+      booking.
+    </li>
+    <li>
+      If fewer people are going to stay than the allotted capacity you need to
+      enter the following MI-number(MI-PRA-555) as an extra.
+    </li>
+    <li>
+      There is a form link, if you don't have enough people to book a room then
+      fill the form and we will connect you with other people having same
+      preferences.
+      <a
+        href="https://docs.google.com/forms/d/e/1FAIpQLSdn5u-H27q7Bufa9sWfGm7iltcFfZiyUX330b3zDJ3h8U0oxw/viewform?usp=sf_link"
+        >(Link to the Form)</a
+      >
+    </li>
+    <li>The following portal is for GROUP booking only.</li>
+    <li>
+      The room once booked cannot be cancelled and the payment is non-refundable
+      and non-transferable.
+    </li>
+    <li>
+      The booking done will only be for 5 days 25th December to 29th December
+      2019.
+    </li>
+  </ul>
+</div>
+<hr style="width: 80%; position: relative; left: 10%;" />
+<div class="guide">
+  <h2 style="text-align: center;">
+    <b>Benefits of booking through MOOD INDIGO</b>
+  </h2>
+  <ul style=" font-size: 17px;">
+    <li>Hotel Rooms at the cheapest rates possible</li>
+    <li>Special Discount for the International Nite’ MAGIC!’ Coupons</li>
+    <li>MOOD INDIGO merchandise at discounted rates</li>
+    <li>Free entry in all the events during daytime & Many more...</li>
+  </ul>
+</div>
+<hr style="width: 80%; position: relative; left: 10%;" />
+
+<div class="main">
+  <hr style="width: 80%; position: relative; left: 10%;" />
+  <div class="contact">
+    <h2 style="text-align: center;"><b>Contact Details</b></h2>
+    <div class="col-sm-4" style="text-align: center;">
+      <p>Mitesh Pawar</p>
+      <p>+91 93701 98850</p>
+    </div>
+    <div class="col-sm-4" style="text-align: center;">
+      <p>Akshat Chaudhary</p>
+      <p>+91 78690 13233</p>
+    </div>
+    <div class="col-sm-4" style="text-align: center;">
+      <p>Prasann Jaiswsal</p>
+      <p>+91 74708 44590</p>
+    </div>
+    <div class="col-sm-4" style="text-align: center;">
+      <p>Aman Bharti</p>
+      <p>+91 96540 83368</p>
+    </div>
+    <div class="col-sm-4" style="text-align: center;">
+      <p>Jaymal Lodha</p>
+      <p>+91 80802 96031</p>
+    </div>
+    <!-- <div class="col-sm-4" style="text-align: center;">
+        <p>Prabhat Singh</p>
+        <p>(For Technical Issues)</p>
+        <p>+91 81156 18738</p>
+      </div> -->
+  </div>
+  <div class="waste1">
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  </div>
+
+  <!-- <div class="waste2"><br /><br /><br /><br /><br /><br /><br /><br /></div> -->
+  <div></div>
+  <hr />
+  <br />
+  <div
+    *ngFor="let row of hoteldetails"
+    class="card"
+    style="width: 80%; position: relative; left: 10%;"
+  >
+    <div style="vertical-align: middle;" class="head">
+      <h3>{{ row.name }}</h3>
+      <h5>{{ row.location }}</h5>
+      <a>{{ row.hotel_link }}</a>
+    </div>
+    <div class="head">
+      <img style="width: 100%;" src="http://api2.moodi.org/{{ row.picture }}" />
+    </div>
+    <!-- <img src="src\assets\img\angular-red.png"> -->
+    <hr />
+    <div *ngFor="let rooms of row.rooms">
+      <div [id]="rooms.id + 'maindiv'" style="text-align: center;">
+        <div class="type">
+          <p>For {{ rooms.no_of_beds }} Persons</p>
+          <p>
+            <span style="font-family: sans-serif; font-weight: 400;"
+              >₹&nbsp;</span
+            >{{ rooms.price }}/- per person per day
+          </p>
+          <p>{{ rooms.description }}</p>
+        </div>
+        <button
+          class="btn"
+          [id]="rooms.id + 'movebtn'"
+          (click)="increment(rooms.id); total(rooms.id); grand_total()"
+        >
+          Add
+        </button>
+
+        <div class="btngrp" [id]="rooms.id + 'btngrp'">
+          <button
+            class="plus"
+            [id]="rooms.id + 'plusbtn'"
+            (click)="increment(rooms.id); total(rooms.id); grand_total()"
+          >
+            +
+          </button>
+          <input
+            class="counter"
+            [id]="rooms.id + 'counterdiv'"
+            type="text"
+            value="{{ counter[rooms.id] }}"
+            readonly
+          />
+          <button
+            class="minus"
+            [id]="rooms.id + 'minusbtn'"
+            (click)="decrement(rooms.id); total(rooms.id); grand_total()"
+          >
+            -
+          </button>
+        </div>
+        <p class="avail">
+          (Rooms Available: {{ rooms.remaining_no_of_rooms }})
+        </p>
+      </div>
+      <div></div>
+      <hr />
+    </div>
+  </div>
+  <div class="card modal" id="move">
+    <div class="info">
+      <div *ngFor="let row of counter; let i = index">
+        <div *ngIf="!(row == 0)">
+          <p>{{ details[i].name }}</p>
+          <p>{{ details[i].no_of_beds }}-Bed Rooms: {{ row }}</p>
+          <p>
+            Price:
+            <span style="font-family: sans-serif; font-weight: 400;"
+              >₹&nbsp;</span
+            >{{ room_price[i] }}/- <br />
+            ({{ details[i].price }} × {{ details[i].no_of_beds }} persons × 5
+            days)
+          </p>
+          <hr style="margin: 0;" />
+        </div>
+      </div>
+    </div>
+    <div class="checkout">
+      <p class="total">
+        Total Price:
+        <span style="font-family: sans-serif; font-weight: 400;">₹&nbsp;</span
+        >{{ grand_value_without_tax }}/-
+      </p>
+      <button class="btn fixed" [disabled]="disable" (click)="checkout()">
+        CHECKOUT
+      </button>
+
+      <div id="loader"></div>
+    </div>
+  </div>
+</div>

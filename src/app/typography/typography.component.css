@@ -1,0 +1,26 @@
+ol {
+    padding: 0;
+}
+
+ol .sub{
+    padding: 0 0 0 20px;
+}
+
+ol .subsub{
+    padding: 0 0 0 40px;
+}
+
+.wrap{
+    color: black;   text-align: justify;  font-size: 15px; background-color: antiquewhite; padding: 3%; border-radius: 1%;
+}
+
+li {
+    padding: 1% 0 0 0;
+}
+
+
+@media screen and (max-width: 800px){
+    .wrap{
+        padding: 8%;
+    }
+}
